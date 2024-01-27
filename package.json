@@ -25,7 +25,10 @@
         "minecraft"
     ],
     "type": "module",
-    "main": "lib/index.js",
+    "exports": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+    },
     "author": "GameDig Contributors",
     "version": "5.0.0-beta.0",
     "repository": {
