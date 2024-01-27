@@ -1,4 +1,4 @@
-const GameDig = require('../dist/index.cjs')
+const { GameDig } = require('../dist/index.cjs')
 // Instead of '../dist/index.cjs' you would have here 'gamedig'.
 
 GameDig.query({
