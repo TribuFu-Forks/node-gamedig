@@ -1,5 +1,5 @@
-import { GameDig } from '../lib/index.js'
-// Instead of '../lib/index.js' you would have here 'gamedig'.
+import { GameDig } from '../dist/index.mjs'
+// Instead of '../dist/index.mjs' you would have here 'gamedig'.
 
 GameDig.query({
   type: 'minecraft',
