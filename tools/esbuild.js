@@ -9,19 +9,20 @@ const baseConfig = {
   minify: false,
   sourcemap: false,
   legalComments: 'none',
-  plugins: [nodeExternalsPlugin()]
 }
 
 const moduleConfig = {
   ...baseConfig,
   outfile: 'dist/index.mjs',
-  format: 'esm'
+  format: 'esm',
+  plugins: [nodeExternalsPlugin()]
 }
 
 const legacyConfig = {
   ...baseConfig,
   outfile: 'dist/index.cjs',
-  format: 'cjs'
+  format: 'cjs',
+  plugins: [nodeExternalsPlugin({ allowList: ['got'] })]
 }
 
 build(moduleConfig).then(() => { }).catch(() => { process.exit(1) })
